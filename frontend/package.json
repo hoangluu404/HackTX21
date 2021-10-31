@@ -1,9 +1,10 @@
 {
   "private": true,
   "scripts": {
+    "gcp-build": "next build",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p 8080"
   },
   "dependencies": {
     "@daily-co/daily-js": "^0.21.0",

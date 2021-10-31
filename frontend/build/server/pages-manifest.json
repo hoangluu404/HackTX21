@@ -1,0 +1,12 @@
+{
+  "/_app": "pages/_app.js",
+  "/api/hello": "pages/api/hello.js",
+  "/customer": "pages/customer.js",
+  "/": "pages/index.js",
+  "/manager": "pages/manager.js",
+  "/support/call": "pages/support/call.js",
+  "/support": "pages/support.js",
+  "/support/thanks": "pages/support/thanks.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js"
+}
