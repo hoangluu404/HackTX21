@@ -28,7 +28,7 @@ h6 {
 
 footer,
 header {
-  @apply my-6 mx-6;
+  @apply mt-12 mx-6;
 }
 
 .pageContainer {
