@@ -1,5 +1,3 @@
-import Button from '../components/button';
-
 export default function Manager(props) {
 	let manager_name = 'Joe';
 	var employees = [{ Joe: 'Link to Joe' }, { James: 'Link to James' }];
@@ -21,13 +19,15 @@ export default function Manager(props) {
 			</p>
 
 			{employees.map((employee) => (
-				<div className="my-2">
-					<Button
-						name={Object.keys(employee)}
-						function={(e) => call_function(e, employee[Object.keys(employee)])}
-					/>
-				</div>
-			))}
+				<button
+					className="button my-2"
+					name={Object.keys(employee)}
+					onClick={(e) => call_function(e, employee[Object.keys(employee)])}
+				>
+					{Object.keys(employee)}
+				</button>
+			))
+			}
 
 			{/* {Object.keys.map((employee_name) => (
 				<>
