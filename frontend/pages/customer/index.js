@@ -10,7 +10,7 @@ export default function Customer() {
 			<div className="my-auto">
 				<img className="px-8 w-auto" src="/img/Isometric Stickers Brainstorming.png" />
 			</div>
-			<button className="button" name="Call Now" function={call_function}>Call Now</button>
+			<a className="button" href="/call">Call Now</a>
 		</>
 	);
 }
