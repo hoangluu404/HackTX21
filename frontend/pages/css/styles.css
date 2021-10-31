@@ -4,7 +4,11 @@
   @apply font-body;
 }
 
-#__next {
+body {
+  @apply bg-background text-main;
+}
+
+#__next > div {
   @apply min-h-screen flex flex-col;
 }
 
@@ -18,5 +22,15 @@ h6 {
 }
 
 .button {
-  @apply block bg-black text-white rounded-full py-4 px-8 mx-8 text-center;
+  background: radial-gradient(50% 50% at 50% 50%, #ea617a 56.77%, #1a4ed3 100%);
+  @apply block text-text rounded-full py-4 px-8 mx-8 text-center font-display max-w-sm;
+}
+
+footer,
+header {
+  @apply my-6 mx-6;
+}
+
+.pageContainer {
+  @apply max-w-prose mx-auto;
 }
