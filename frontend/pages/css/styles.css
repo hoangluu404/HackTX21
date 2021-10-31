@@ -16,3 +16,7 @@ h5,
 h6 {
   @apply font-display;
 }
+
+.button {
+  @apply block bg-black text-white rounded-full py-4 px-8 mx-8 text-center;
+}
