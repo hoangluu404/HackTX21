@@ -11,7 +11,7 @@ const EMOTIONS = {
 
 function Overlay({ rank }) {
     return (
-        <div className="absolute z-30 text-4xl right-8 mt-20">{EMOTIONS[rank]}</div>
+        <div className="absolute z-30 text-4xl right-8 mt-20 bg-white p-1 rounded-full">{EMOTIONS[rank]}</div>
     )
 }
 
