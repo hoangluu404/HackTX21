@@ -18,12 +18,12 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-display;
+  @apply font-display font-bold;
 }
 
 .button {
   background: radial-gradient(50% 50% at 50% 50%, #ea617a 56.77%, #1a4ed3 100%);
-  @apply block text-text rounded-full py-4 px-8 mx-8 text-center font-display max-w-sm;
+  @apply block text-text rounded-full py-4 px-8 mx-8 text-center font-display max-w-sm font-bold;
 }
 
 footer,

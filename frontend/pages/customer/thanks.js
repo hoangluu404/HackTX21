@@ -1,5 +1,5 @@
-import Image from '../../components/image';
 import Title from "../../components/title";
+import Link from "next/link";
 
 export default function Customer() {
 	let call_function = () => {
@@ -11,7 +11,9 @@ export default function Customer() {
 			<div className="my-auto">
 				<img className="w-full lg:hidden" src="/img/Happy Bunch Color.png" />
 			</div>
-			<button className="button" name="Call Again" function={call_function}>Call Again</button>
+			<Link href="/call">
+				<a className="button" name="Call Again" function={call_function}>Call Again</a>
+			</Link>
 		</>
 	);
 }

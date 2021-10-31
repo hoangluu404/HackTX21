@@ -1,4 +1,5 @@
 import Title from "../../components/title";
+import Link from "next/link";
 
 export default function Customer() {
 	let call_function = () => {
@@ -10,7 +11,9 @@ export default function Customer() {
 			<div className="my-auto">
 				<img className="px-8 w-auto" src="/img/Isometric Stickers Brainstorming.png" />
 			</div>
-			<a className="button" href="/call">Call Now</a>
+			<Link href="/call">
+				<a className="button">Call Now</a>
+			</Link>
 		</>
 	);
 }

@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import DailyIframe from "@daily-co/daily-js";
+import { useRouter } from "next/router";
 
 const CALL_OPTIONS = {
     iframeStyle: {
@@ -13,7 +14,7 @@ const CALL_OPTIONS = {
         width: "100%",
         height: "100%"
     },
-    showLeaveButton: false,
+    showLeaveButton: true,
     showFullscreenButton: true,
     //   showLocalVideo: false,
     //   showParticipantsBar: false,
@@ -21,8 +22,10 @@ const CALL_OPTIONS = {
 
 const DEFAULT_HEIGHT = 400;
 
-const WebinarCall = () => {
+const WebinarCall = ({ handler }) => {
     const videoRef = useRef(null);
+    const router = useRouter();
+
     const [height, setHeight] = useState(DEFAULT_HEIGHT);
     const [callframe, setCallframe] = useState(null);
 
@@ -36,6 +39,10 @@ const WebinarCall = () => {
             CALL_OPTIONS
         );
 
+        newCallframe.on("left-meeting", () => {
+            newCallframe.leave().then(handler)
+        })
+
         newCallframe.join().then(() => {
             // setHeight((videoRef?.current?.clientWidth || 500) * 0.75);
             setCallframe(newCallframe);
@@ -43,7 +50,7 @@ const WebinarCall = () => {
     }, [videoRef]);
 
     return (
-        <div className="flex-1 relative" ref={videoRef}>
+        <div className="flex-1 relative z-0" ref={videoRef}>
         </div>
     );
 };
